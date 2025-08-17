@@ -7,3 +7,6 @@ var a = 46;   //  Redeclare
 let x = 30;
 x = 40;       //  Reassign
 // let x = 330; // Redeclaration not allowed
+
+// var add value in window
+// var is function scooped
