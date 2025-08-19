@@ -31,6 +31,19 @@ let sym1 = Symbol('id');
 let sym2 = Symbol('id');
 console.log(sym1 === sym2); // false (symbols are always unique)
 
+// Create an object with some properties
+let obj = {
+    uid: 1,
+    name: 'Tanjim',
+    age: 23,
+    email: 'tanjim@gmail.com',
+};
+
+// Create a Symbol with the description 'uid'
+let u1 = Symbol('uid');
+// Add a new property to the object, but using the Symbol as the key
+obj[u1] = '1';
+
 // 7. BigInt (for large integers)
 let bigNumber = 1234567890123456789012345678901234567890n;
 console.log(bigNumber); // 1234567890123456789012345678901234567890n
