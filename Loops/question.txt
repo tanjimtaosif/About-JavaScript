@@ -1,0 +1,6 @@
+Q1. Print numbers from 1 to 10 using a for loop.
+Q2. Print numbers from 10 to 1 using a while loop.
+Q3. Print even numbers from 1 to 20 using a for loop.
+Q4. Print odd numbers from 1 to 15 using a while loop.
+Q5. Print the multiplication table of 5 (i.e., 5 x 1 = 5 ... 5 x 10 = 50)
+Q6. Find the sum of numbers from 1 to 100 using a loop.
