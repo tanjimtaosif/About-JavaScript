@@ -4,3 +4,7 @@ Q3. Print even numbers from 1 to 20 using a for loop.
 Q4. Print odd numbers from 1 to 15 using a while loop.
 Q5. Print the multiplication table of 5 (i.e., 5 x 1 = 5 ... 5 x 10 = 50)
 Q6. Find the sum of numbers from 1 to 100 using a loop.
+Q7. Print all numbers between 1 to 50 that are divisible by 3.
+Q8. Ask the user for a number and print whether each number from 1 to that number is even or odd.
+    (e.g., "1 is odd", "2 is even", ... )
+Q9. Count how many numbers between 1 to 100 are divisible by both 3 and 5.
