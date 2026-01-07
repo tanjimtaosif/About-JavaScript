@@ -1,0 +1,18 @@
+Q1: Stop at First Multiple of 7
+Write a loop from 1 to 100 that:
+- Prints each number
+- Stops completely when it finds the first number divisible by 7
+
+Q2: Skip Multiples of 3
+Write a loop from 1 to 20 that: 
+Skips numbers divisible by 3 Prints all others
+- Use continue
+- Expected output:
+  1 2 4 5 7 8 10 11 ... (no 3, 6, 9, etc.)
+
+Q3: Print First 5 0dd Numbers Only
+Write a loop from 1 to 100 that:
+Prints only 5 odd numbers Then stops the loop
+- Use both if, continue, and a counter + break
+- Expected output:
+  1 3 5 7 9
