@@ -1,0 +1,102 @@
+Q1: What's the difference between function declaration and expression in terms of hoisting?
+
+Q2: What's the output of this code:
+    greet();
+
+    function greet() {
+    console. log ("Hello!");
+    }
+
+Q3: Convet this code in arrow function:
+    funcțion multiply(a, b) {
+    return a * b;
+    }
+
+Q4: Identify parameters and arguments in this code:
+    function welcome(name) {
+    console. log (name);
+
+    welcome ("Harsh");
+    }
+
+Q5: Identify how many parameters and arguments in this code:
+    function demo(a, b, c) {}
+    demo(1, 2);
+
+Q6: Indetify the output of this code:
+    function sayHi (name = "Guest") {
+    console. log ("Hi", name);
+    }
+    sayHi();
+
+Q7: Q7: What does the ... operator mean in parameters?
+
+Q8: Use rest parameter to accept any number of scores and return the total.
+
+Q9: Solve this using early return pattern: 
+
+    function checkAge(age) {
+        if (age < 18) {
+        console. log("Too young") ;
+        } else {
+        console. log ("Allowed");
+        }
+    }
+
+Q10: What will be returned:
+    function f() {
+        return;
+    }
+
+Q11: What does it mean when we say "functions are first-class citizens"?
+
+Q12: Can you assign a function to a variable and then call it? Show how.
+
+Q13: Pass a function into another function and execute it inside.
+
+Q14: What is a higher-order function?
+
+Q15: Identify higher order function:
+    [1, 2, 3].map(function (x) {
+        return x * 2;
+    });
+
+Q16: Convert the above function into a pure function.
+    let total = 0;
+    function addToTotal(num) {
+        total += num;
+    }
+
+Q17: What is the output:
+    function outer() {
+        let count = 0;
+        return function () {
+            count++;
+            console. log(count);
+
+        };
+    }
+    const counter = outer() ;
+    counter();
+    counter();
+
+Q18: Convert this normal function into an IIFE
+    function init() {
+        console. log("Initialized");
+    }
+
+Q19: What is the use of IIFE? Name one real-world use case.
+
+Q20: What will be the output here and why?
+    greet();
+
+    var greet = function () {
+        console. log ("Hi!");
+    };
+
+Q20: What will be the output here and why?
+    greet();
+
+    function greet() {
+        console. log ("Hi!");
+    }
