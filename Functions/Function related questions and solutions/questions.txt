@@ -16,7 +16,7 @@ Q4: Identify parameters and arguments in this code:
     function welcome(name) {
     console. log (name);
 
-    welcome ("Harsh");
+    welcome ("Mahtab");
     }
 
 Q5: Identify how many parameters and arguments in this code:
