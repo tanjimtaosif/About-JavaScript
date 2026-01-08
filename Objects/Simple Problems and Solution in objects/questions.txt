@@ -1,0 +1,59 @@
+Q1: Create an object for a student with name, age, and
+isEnrolled.
+Q2: Can an object key be a number or boolean? Try this!
+Q3:  Access the value of "first-name" from this object:
+    const user = {
+        "first-name": "Mahtab",
+    };
+Q4: Given a dynamic key let key = "age", how will you access user [key]?
+Q5: From the object below, print the latitude:
+    const location = {
+        city: "Rampura",
+        coordinates: {
+            lat: 23.2,
+            lng: 77.4,
+        },
+    };
+Q6: What will happen if coordinates is missing? How can you prevent errors?
+Q7: Destructure the city and lat from the location object below:
+    const location = {
+        city: "Rampura",
+        coordinates: {
+            lat: 23.2,
+            lng: 77.4,
+        },
+    };
+Q8: Destructure the key "first-name" as a variable called
+firstName.
+    const user = {
+        "first-name": "Mahtab",
+    };
+Q9: Use for-in to log all keys in this object:
+    const course = {
+        title: "JavaScript",
+        duration: "4 weeks",
+    };
+
+Q10: Use Object.entries() to print all key-value pairs as:
+    Output:
+    title: JavaScript
+    duration: 4 weeks
+    const course = {
+        title: "JavaScript",
+        duration: "4 weeks",
+    };
+Q11: Copy the object given below using spread: 
+    const original = { a: 1, b: 2 };
+
+Q12: What is problem in this code snippet:
+    const obj1 = { info: { score: 80 } };
+    const clone = { ... obj1 };
+    clone. info.score = 100;
+    console.log(obj1.info.score); ?
+Q13: Deep clone the obj1 safely.
+    const obj1 = { info: { score: 80 } };
+Q14: Rewrite this safely using optional chaining:
+    const person = {};
+    console. log(person. profile. name); // X
+Q15: Use a variable to dynamically assign a property
+    const key = "role";
