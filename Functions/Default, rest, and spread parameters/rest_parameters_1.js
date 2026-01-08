@@ -1,5 +1,10 @@
-// When we have too many arguments, then we have to create all parameters equal to our arguments. Then we use rest to pass the arguments to a single parameters. rest use in function parameter space.
+// The Rest Parameter (...) gathers all individual arguments into a single Array.
+// It is used when you don't know exactly how many values will be passed to the function.
 function abc(...val) {
+    // 'val' is now a real array that you can use with methods like .map() or .sort()
     console.log(val);
 }
-abc(1, 23, 43, 54, 4345, 52)
+
+// You can pass 2 arguments or 200; the rest parameter handles them all.
+abc(1, 23, 43, 54, 4345, 52);
+// Output: [1, 23, 43, 54, 4345, 52]
