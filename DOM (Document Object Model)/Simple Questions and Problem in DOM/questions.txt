@@ -1,0 +1,27 @@
+Q1: What is the DOM? How does it represent the HTML structure?
+Q2: Name the types of nodes in the DOM tree.
+Q3: What's the difference between an element node and a text node?
+Q4: Inspect the following HTML in the browser and identify each node :
+    <div>
+        Hello <span>World</span>
+    </div>
+Q5: What is the difference between getElementById and querySelector?
+Q6: What does getElementsByClassName return? Is it an array? Ans -> Html collection
+Q7: Use querySelectorAll to select all buttons with class ".buy-now".
+Q8: What's the difference between innerText, textContent, and innerHTML?
+Q9: When should you use textContent instead of innerText?
+Q10: What does setAttribute() do?
+
+T1: Select the heading of a page by ID and change its text to "Welcome to my programming world!".
+T2: Select all <li> elements and print their text using a loop.
+T3: // Select a paragraph and replace its content with:
+    {/* <b>Updated</b> by JavaScript */}
+T4: How do you get the src of an image using JavaScript?
+T5: Select a link and update its href to point to https://boy-coy.com/.
+T6: Add a title attribute to a div dynamically.
+T7: 
+T8: 
+T9: 
+T10: 
+T11: 
+ 
