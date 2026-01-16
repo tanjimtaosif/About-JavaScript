@@ -1,0 +1,16 @@
+1. Very Basic Loop Warm-ups (Numbers)
+   a. Print numbers from 1 to 10
+   b. Print numbers from 10 to 1
+   c. Print all even numbers between 1 and 50
+   d. Print all odd numbers between 1 and 50
+   e. Print the multiplication table of 5
+   f. Print the squares of numbers from 1 to 10
+
+2. Loop + Conditions
+    a. Print numbers from 1 to 100
+        1. Print "Fizz" if divisible by 3
+        2. Print "Buzz" if divisible by 5
+        3. Print "FizzBuzz" if divisible by both
+    b. Count how many numbers between 1 and 100 are divisible by 7
+    c. Find the sum of numbers from 1 to 100
+    d. Find the sum of only even numbers between 1 and 100
