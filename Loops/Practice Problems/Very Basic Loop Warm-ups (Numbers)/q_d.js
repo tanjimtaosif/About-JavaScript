@@ -1,0 +1,7 @@
+// Print all odd numbers between 1 and 50
+
+for(let num = 1; num <= 50; num++){
+    if(num%2 !== 0){
+        console.log(`Odd numbers :`, num);
+    }
+}
