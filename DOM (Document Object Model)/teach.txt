@@ -1,8 +1,8 @@
 Teach:
-o DOM Tree structure: node, element, text, comment
-o Selecting elements: getElementByld, getElementsByClassName, querySelector,
-querySelectorAll
-o Text/content access: innerText, textContent, innerHTML
-o Attribute manipulation: getAttribute, setAttribute, removeAttribute
-o Dynamic DOM manipulation: createElement, appendChild, removeChild, prepend
-o Style updates via .style and classList (add, remove, toggle)
+- DOM Tree structure: node, element, text, comment
+- Selecting elements: getElementByld, getElementsByClassName, querySelector,
+  querySelectorAll
+- Text/content access: innerText, textContent, innerHTML
+- Attribute manipulation: getAttribute, setAttribute, removeAttribute
+- Dynamic DOM manipulation: createElement, appendChild, removeChild, prepend
+- Style updates via .style and classList (add, remove, toggle)
