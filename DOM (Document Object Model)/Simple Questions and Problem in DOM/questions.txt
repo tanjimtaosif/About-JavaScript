@@ -9,8 +9,14 @@ Q5: What is the difference between getElementById and querySelector?
 Q6: What does getElementsByClassName return? Is it an array? Ans -> Html collection
 Q7: Use querySelectorAll to select all buttons with class ".buy-now".
 Q8: What's the difference between innerText, textContent, and innerHTML?
-Q9: When should you use textContent instead of innerText?
+Q9: When should you use textContent instead of innerText? -> textContent is fast and also changes eh hidden content also.
 Q10: What does setAttribute() do?
+Q11: What does createElement ( ) do? What's returned?
+Q12: What's the difference between appendChild() and prepend()
+Q13: Can you remove an element using removeChild()?
+Q15: How do you change the background color of an element?
+Q16: What's the difference between . cilassList.add() and .classList. toggle()?
+
 
 T1: Select the heading of a page by ID and change its text to "Welcome to my programming world!".
 T2: Select all <li> elements and print their text using a loop.
@@ -19,9 +25,10 @@ T3: // Select a paragraph and replace its content with:
 T4: How do you get the src of an image using JavaScript?
 T5: Select a link and update its href to point to https://boy-coy.com/.
 T6: Add a title attribute to a div dynamically.
-T7: 
-T8: 
-T9: 
-T10: 
-T11: 
+T7: Remove the disabled attribute from a button.
+T8: Create a new list item <li>New Task</li> and add it to the end of a <ul>.
+T9: Create a new image element with a placeholder source and add it at the top of a div.
+T10: Select the first item in a list and delete it from the DOM.
+T11: Add a highlight class to every even item in a list.
+T12: Set the font size of all <p> elements to 18px using .style. 
  
