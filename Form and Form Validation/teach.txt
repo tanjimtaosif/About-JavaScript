@@ -1,0 +1,6 @@
+Teach:
+- Reading values from input, textarea, select
+- Prevent default submission
+- Inline and JS-based validation
+- Showing error messages conditionally
+- Pattern attribute vs custom regex
