@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        #main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #222;
+        }
+
+        h1{
+            color: #555;
+            font-size: 8rem;
+            font-weight: 300;
+            user-select: none;
+        }
+
+        input{
+            display: none;
+        }
+
+        #upld{
+            padding: 12px 22px;
+            background-color: rgb(99, 143, 128);
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+
+        #upld:hover{
+            background-color: rgb(62, 82, 75);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input id="fileinput" type="file">
+        <div id="upld">
+            Upload File
+        </div>
+    </div>
+    <script src="clickNchange.js"></script>
+</body>
+</html>
