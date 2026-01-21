@@ -1,0 +1,5 @@
+- Event binding: addEventListener, removeEventListener
+- Common events: click, input, change, submit, mouseover, mousemove, keyup
+- Event object: target, type, preventDefault
+- Event bubbling and capturing
+- Event delegation 
