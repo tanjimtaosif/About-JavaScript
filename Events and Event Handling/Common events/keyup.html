@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        transition: background 0.3s ease; /* Smooth background change */
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 10rem;
+        transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0);
+      }
+
+      /* This class will be added by JS during keydown */
+      .active {
+        transform: scale(1.2);
+        color: #00ffcc;
+        text-shadow: 0 0 30px #00ffcc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <p style="color: #555">Press and hold any key</p>
+      <h1></h1>
+    </div>
+    <script src="keyup.js"></script>
+  </body>
+</html>
