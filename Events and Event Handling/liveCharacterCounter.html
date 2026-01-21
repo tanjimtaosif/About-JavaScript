@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+        font-family:
+          "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: #222;
+      }
+
+      #main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: #222;
+      }
+
+      h1 {
+        color: white;
+        padding-left: 12px;
+      }
+
+      input {
+        display: block;
+        padding: 10px 15px;
+        margin: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="Write Anything" />
+    <h1>Total Character : <span>0</span></h1>
+
+    <script src="liveCharacterCounter.js"></script>
+  </body>
+</html>
