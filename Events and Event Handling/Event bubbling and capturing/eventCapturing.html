@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #222;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #main {
+        position: relative;
+        margin: 10px;
+      }
+      .btn {
+        background-color: rgb(240, 255, 127);
+        border: none;
+        border-radius: 5px;
+        padding: 8px 24px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .red {
+        width: 300px;
+        height: 200px;
+        background-color: red;
+  
+      }
+      .green {
+        width: 500px;
+        height: 300px;
+        background-color: green;
+  
+      }
+      .yellow {
+        width: 900px;
+        height: 600px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="yellow">
+        <div class="green">
+          <div class="red">
+            <button class="btn">Click Me</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="eventCapturing.js"></script>
+  </body>
+</html>
