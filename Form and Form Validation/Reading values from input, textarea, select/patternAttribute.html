@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern Attribute Example</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #1a1a1a;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        background: #252525;
+        padding: 2rem;
+        border-radius: 8px;
+        width: 300px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .field-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #999;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        background: #333;
+        border: 2px solid #444;
+        border-radius: 4px;
+        color: white;
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      /* Logic: Red if invalid, Green if valid (only after user types) */
+      input:not(:placeholder-shown):invalid {
+        border-color: #ff4d4d;
+      }
+
+      input:not(:placeholder-shown):valid {
+        border-color: #2ecc71;
+      }
+
+      /* Small hint text that appears when focusing the input */
+      .hint {
+        font-size: 11px;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="field-group">
+        <label>Phone Number (Format: 000-000-0000)</label>
+
+        <input
+          type="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder=" "
+          required
+          title="Please use the format: 123-456-7890"
+        />
+
+        <div class="hint">Must be 10 digits with dashes</div>
+      </div>
+
+      <button type="submit">Verify Number</button>
+    </form>
+  </body>
+</html>
