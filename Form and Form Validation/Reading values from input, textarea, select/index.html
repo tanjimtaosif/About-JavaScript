@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        background-color: #222;
+      }
+      input {
+        display: block;
+        padding: 5px 5px;
+        margin-bottom: 0px;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #444;
+        background-color: #333;
+        color: white;
+        font-size: 14px;
+        margin-bottom: 2px;
+      }
+
+      input[type="submit"] {
+        padding: 12px;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+
+      #form__field {
+        padding: 40px;
+        background-color: #222;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px !important;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      textarea {
+        height: 100px;
+        resize: vertical; /* Allows user to stretch height only */
+      }
+
+      #hide {
+        color: red;
+        font-size: 12px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form__field">
+      <form>
+        <input id="name" type="text" placeholder="name" /> <br />
+        <small id="hide">Your name should be greater then 2 character</small>
+        <input type="text" placeholder="email" /> <br />
+        <input type="text" placeholder="password" /> <br />
+
+        <select name="" id="">
+          <option value="male">Male</option>
+          <option value="male">Female</option>
+          <option value="male">Others</option>
+        </select>
+        <br />
+        <textarea placeholder="Tell us about you"></textarea>
+        <input type="submit" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
