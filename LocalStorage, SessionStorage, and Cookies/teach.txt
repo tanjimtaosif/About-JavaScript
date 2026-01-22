@@ -1,0 +1,26 @@
+Teach:
+- localStorage API: setltem, getltem, removeltem, clear
+- sessionStorage API
+- Storing/retrieving strings vs JSON
+- Basic cookie structure (manual key=value;path=/ format)
+
+- Local localStorage
+    - Stores data in browser, if we shut down the browser it also hold the data.
+    - How to store data - setItem
+    - How to fetch data - getItem
+    - How to remove data - removeItem
+    - How to update data - setItem, it will update the existing data if not created.
+    - Local Stirage only expects string data but we can use JSON.stringify to convert array or objects to string then we can store in local Storage. and to get in natiral format data we have to use JSON.parse to convert data string format data to natural format
+
+    localStorage.setItem
+
+- Session Storage 
+    - Its also hold the data but when we shut down the tab or the browser, it's get deleted
+    - used for temporal data.
+    -
+
+- Cookies 
+    - Store the data in the cookies property, including closing the browser but it hold less amount of data then the local and session storage.
+    - Nearly ~4kb data
+    - Whatever data we store in the cookies, it will send the data on the server automatically 
+    - document.cookie = "name = tanjim@gmail.com" it will hold the data until we delete this
