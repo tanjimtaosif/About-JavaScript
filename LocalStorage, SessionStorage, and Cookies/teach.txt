@@ -1,26 +1,52 @@
-Teach:
-- localStorage API: setltem, getltem, removeltem, clear
-- sessionStorage API
-- Storing/retrieving strings vs JSON
-- Basic cookie structure (manual key=value;path=/ format)
+WEB STORAGE AND COOKIES CHEAT SHEET
+    1. Local Storage (localStorage)
+    - Definition: Stores data in the browser with no expiration date. Data persists even after the browser is closed and restarted.
+    - Storage Limit: ~5MB to 10MB.
+    - Security: Data is not sent to the server; it stays on the client side.
+    - Core Methods:
+        a. Create/Update: localStorage.setItem("key", "value") — If the key exists, it updates; if not, it creates it.
+        b. Read: localStorage.getItem("key") — Returns the value.
+        c. Delete One: localStorage.removeItem("key") — Removes a specific item.
+        d. Delete All: localStorage.clear() — Wipes all local storage for that domain.
 
-- Local localStorage
-    - Stores data in browser, if we shut down the browser it also hold the data.
-    - How to store data - setItem
-    - How to fetch data - getItem
-    - How to remove data - removeItem
-    - How to update data - setItem, it will update the existing data if not created.
-    - Local Stirage only expects string data but we can use JSON.stringify to convert array or objects to string then we can store in local Storage. and to get in natiral format data we have to use JSON.parse to convert data string format data to natural format
+    2. Session Storage (sessionStorage)
+    - Definition: Stores data for the duration of the page session.
+    - Temporary: Data is deleted immediately when the specific tab or window is closed.
+    - Scope: Data is restricted to the specific tab where it was set.
+    - Methods: Uses the exact same methods as localStorage (setItem, getItem, removeItem, clear).
 
-    localStorage.setItem
+    3. Storing Strings vs. JSON
+    Web Storage (Local and Session) only stores data as strings. To store objects or arrays, you must convert them.
 
-- Session Storage 
-    - Its also hold the data but when we shut down the tab or the browser, it's get deleted
-    - used for temporal data.
-    -
+    - To Store (Object to String): Use JSON.stringify()
 
-- Cookies 
-    - Store the data in the cookies property, including closing the browser but it hold less amount of data then the local and session storage.
-    - Nearly ~4kb data
-    - Whatever data we store in the cookies, it will send the data on the server automatically 
-    - document.cookie = "name = tanjim@gmail.com" it will hold the data until we delete this
+      - JavaScript
+        const user = { name: "Tanjim", id: 101 };
+        localStorage.setItem("userData", JSON.stringify(user));
+        To Retrieve (String back to Object): Use JSON.parse()
+
+      - JavaScript
+        const data = localStorage.getItem("userData");
+        const userObj = JSON.parse(data); 
+        console.log(userObj.name); // Tanjim
+
+    4. Cookies
+    - Definition: Small files used for tracking and session management. Unlike Web Storage, cookies are automatically sent to the server with every HTTP request.
+
+    Storage Limit: Very small (approx. 4KB).
+    - Manual Structure: Uses a string format with specific attributes.
+    - Key=Value: The data itself.
+    - path=/: Makes the cookie accessible on all pages of the site.
+    - expires: (Optional) Sets a specific date for deletion.
+
+    Basic Implementation:
+
+      - JavaScript
+        // Setting a cookie
+        document.cookie = "username=tanjim@gmail.com; path=/";
+
+        // Setting a cookie with an expiration (e.g., expires in UTC time)
+        document.cookie = "theme=dark; path=/; expires=Fri, 31 Dec 2026 23:59:59 GMT";
+
+        // Reading cookies (returns all cookies as one long string)
+        console.log(document.cookie);
