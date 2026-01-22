@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email Checker</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        background: #1e1e1e;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        background: #333;
+        border: 1px solid #444;
+        color: white;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #00d1b2;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #00b89c;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2>Check your Email</h2>
+      <input type="text" id="name" placeholder="Enter email address" />
+      <button type="submit">Validate</button>
+      <p id="result"></p>
+    </form>
+
+    <script>
+      let nm = document.querySelector("#name");
+      let form = document.querySelector("form");
+      let resultMsg = document.querySelector("#result");
+
+      form.addEventListener("submit", function (details) {
+        details.preventDefault();
+
+        // The Email Regex
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Test the input value
+        let ans = regex.test(nm.value);
+
+        // Show the result in console
+        console.log("Is the email valid?", ans);
+
+        // Show the result on the webpage
+        resultMsg.textContent = ans ? "Valid Email" : "Invalid Email";
+        resultMsg.style.color = ans ? "limegreen" : "crimson";
+      });
+    </script>
+  </body>
+</html>
