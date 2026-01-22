@@ -1,0 +1,4 @@
+Teach:
+- setTimeout, clearTimeout
+- setInterval, clearInterval
+- Real use: delaying UI actions, auto-refresh 
