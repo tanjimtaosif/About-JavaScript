@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  /* Space between search and card */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Search Field Styling */
+.search-box input {
+  background-color: #1a1a1a;
+  border: none;
+  color: #888;
+  padding: 10px 12px;
+  width: 240px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  border-radius: 10px;
+  /* Rounded corners */
+  overflow: hidden;
+  /* Clips image to corners */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The Overlay Text */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.card-overlay h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-overlay p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #ddd;
+}
