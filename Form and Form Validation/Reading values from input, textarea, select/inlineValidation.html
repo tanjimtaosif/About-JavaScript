@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Inline Validation</title>
+    <style>
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #121212;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      form {
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #bbb;
+      }
+
+
+      input {
+        padding: 12px;
+        border-radius: 6px;
+        border: 2px solid #333;
+        background-color: #252525;
+        color: white;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+
+      input:focus {
+        border-color: #007bff;
+      }
+
+      input:not(:placeholder-shown):valid {
+        border-color: #2ecc71;
+      }
+
+   
+      input:not(:placeholder-shown):invalid {
+        border-color: #e74c3c;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #2ecc71;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="user">Username</label>
+      <input type="text" id="user" required minlength="3" placeholder=" " />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder=" " />
+
+      <button type="submit">Create Account</button>
+    </form>
+  </body>
+</html>
