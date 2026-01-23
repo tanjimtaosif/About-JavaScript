@@ -1,9 +1,9 @@
 // Create new cards, and store data in the local storage
 // Fetch cards from local storage
 // Handle buttons
-// HNdle filters
+// Handle filters
 
-// ALl variables and doc selections
+// All variables and doc selections
 
 let addNote = document.querySelector("#add-note");
 
