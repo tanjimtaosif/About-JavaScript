@@ -52,7 +52,7 @@ const users = [
 ];
 
 // Select DOM elements first
-const inp = document.querySelector(".inp");
+
 const cardsContainer = document.querySelector(".cards");
 
 function showUsers(arr) {
@@ -93,6 +93,7 @@ function showUsers(arr) {
 // Initial render
 showUsers(users);
 
+const inp = document.querySelector(".inp");
 // Filter event listener
 inp.addEventListener("input", () => {
   const query = inp.value.trim().toLowerCase();
