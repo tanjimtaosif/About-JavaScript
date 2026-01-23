@@ -56,12 +56,15 @@ body {
 .black {
   background: black;
 }
+
 .purple {
   background: #a855f7;
 }
+
 .orange {
   background: #fb923c;
 }
+
 .teal {
   background: #14b8a6;
 }
@@ -88,11 +91,13 @@ body {
 .card:nth-child(1) {
   z-index: 3;
 }
+
 .card:nth-child(2) {
   z-index: 2;
   transform: translateY(10px) scale(0.98);
   opacity: 0.9;
 }
+
 .card:nth-child(3) {
   z-index: 1;
   transform: translateY(20px) scale(0.96);
@@ -123,6 +128,8 @@ h2 {
 
 .buttons {
   margin-top: 15px;
+  display: flex;
+  align-items: center;
 }
 
 button.call {
@@ -214,4 +221,20 @@ input[type="text"] {
   border-radius: 100px;
   text-transform: capitalize;
   cursor: pointer;
+}
+
+/* Delete Button Styles */
+button.delete {
+  background: #ef4444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+button.delete:hover {
+  background: #dc2626;
 }
