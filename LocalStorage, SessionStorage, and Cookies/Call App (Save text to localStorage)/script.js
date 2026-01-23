@@ -36,16 +36,9 @@ const submitButton = form.querySelector(".submit-btn");
 // Code starts here
 
 function saveToLocalStorage(obj) {
-  if (localStorage.getItem("tasks") === null) {
-    let oldTasks = [];
-    oldTasks.push(obj);
-    localStorage.setItem("tasks", JSON.stringify(oldTasks));
-  } else {
-    let oldTasks = localStorage.getItem("tasks");
-    oldTasks = JSON.parse(oldTasks);
-    oldTasks.push(obj);
-    localStorage.setItem("tasks", JSON.stringify(oldTasks));
-  }
+  let oldTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  oldTasks.unshift(obj); // New note goes to the top (index 0)
+  localStorage.setItem("tasks", JSON.stringify(oldTasks));
 }
 
 addNote.addEventListener("click", function () {
@@ -108,12 +101,20 @@ form.addEventListener("submit", function (evt) {
   showCards();
 });
 
+// function to delete a task
+function deleteTask(index) {
+  let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  allTasks.splice(index, 1);
+  localStorage.setItem("tasks", JSON.stringify(allTasks));
+  showCards();
+}
+
 function showCards() {
   stack.innerHTML = "";
 
-  let allTasks = JSON.parse(localStorage.getItem("tasks"));
+  let allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  allTasks.forEach(function (task) {
+  allTasks.forEach(function (task, index) {
     // Create card container
     const card = document.createElement("div");
     card.classList.add("card");
@@ -170,9 +171,20 @@ function showCards() {
     msgBtn.classList.add("msg");
     msgBtn.textContent = "Message";
 
+    // Delete button
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete");
+    deleteBtn.innerHTML = '<i class="ri-delete-bin-line"></i>';
+    deleteBtn.onclick = function () {
+      if (confirm("Delete this note?")) {
+        deleteTask(index);
+      }
+    };
+
     // Append buttons
     buttonsDiv.appendChild(callBtn);
     buttonsDiv.appendChild(msgBtn);
+    buttonsDiv.appendChild(deleteBtn);
 
     // Append buttonsDiv to card
     card.appendChild(buttonsDiv);
@@ -180,32 +192,70 @@ function showCards() {
     // Finally, add the card to the DOM (for example, inside a container)
     document.querySelector(".stack").appendChild(card); // or any container of your choice
   });
+  updateStack();
 }
 showCards();
 
 // Update
 function updateStack() {
-  const card = document.querySelectorAll(".stack .card");
+  const cards = document.querySelectorAll(".stack .card");
 
-  for (let i = 0; i < 3; i++) {
-    card[i].style.zIndex = 3 - i;
-    card[i].style.transform = `translateY(${i * 10}px) scale(${1 - i * 0.02})`;
-    card[i].style.opacity = `${1 - i * 0.02}`;
-  }
+  cards.forEach((card, i) => {
+    if (i < 3) {
+      // Visible stack cards
+      card.style.zIndex = 3 - i;
+      card.style.transform = `translateY(${i * 10}px) scale(${1 - i * 0.02})`;
+      card.style.opacity = `${1 - i * 0.02}`;
+      card.style.display = "block"; // Ensure it's shown
+    } else {
+      // Hidden cards (if more than 3)
+      card.style.zIndex = 0;
+      card.style.transform = `translateY(20px) scale(0.9)`;
+      card.style.opacity = "0";
+      card.style.display = "none"; // Hide completely or just visual hide
+    }
+  });
 }
 
 upBtn.addEventListener("click", function () {
-  let lastChild = stack.lastElementChild;
-  if (lastChild) {
-    stack.insertBefore(lastChild, stack.firstElementChild);
-    updateStack();
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  if (tasks.length > 1) {
+    // Move last to first (Bottom to Top)
+    const lastTask = tasks.pop();
+    tasks.unshift(lastTask);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    showCards();
   }
 });
 
 downBtn.addEventListener("click", function () {
-  const firstChild = stack.firstElementChild;
-  if (firstChild) {
-    stack.appendChild(firstChild);
-    updateStack();
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  if (tasks.length > 1) {
+    // Move first to last (Top to Bottom)
+    const firstTask = tasks.shift();
+    tasks.push(firstTask);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    showCards();
+  }
+});
+
+// Handle Call and Message buttons via Event Delegation
+stack.addEventListener("click", function (e) {
+  // Handle Call Button
+  const callBtn = e.target.closest(".call");
+  if (callBtn) {
+    const card = callBtn.closest(".card");
+    const name = card.querySelector("h2").textContent;
+    alert(`Calling ${name}...`);
+    return;
+  }
+
+  // Handle Message Button
+  const msgBtn = e.target.closest(".msg");
+  if (msgBtn) {
+    const card = msgBtn.closest(".card");
+    const name = card.querySelector("h2").textContent;
+    alert(`Messaging ${name}...`);
+    return;
   }
 });
