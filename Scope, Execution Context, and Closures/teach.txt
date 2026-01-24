@@ -1,0 +1,6 @@
+Teach:
+- Variable Scope: global, block, functional
+- Execution context: memory creation & execution phase
+- Lexical scope vs dynamic scope
+- Closure definition and how variables are preserved
+    - Use cases: private counters, encapsulation
