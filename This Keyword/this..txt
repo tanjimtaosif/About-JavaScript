@@ -1,0 +1,15 @@
+Value of this
+
+es5 function
+function
+
+arrow
+
+global - window
+function - window
+method with es5 fnc - object
+method with es6 arrow fnc - window
+es5 function inside es5 method - window
+arrow function inside es5 method - object
+event handler - element
+class - blank object
