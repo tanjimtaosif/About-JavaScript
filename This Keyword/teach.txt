@@ -1,0 +1,5 @@
+Teach:
+
+O this in global scope, function, method, event handler, class
+o Arrow functions and lexical this
+o Manual binding: bind, call, apply
