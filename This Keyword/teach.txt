@@ -1,5 +1,4 @@
 Teach:
-
-O this in global scope, function, method, event handler, class
-o Arrow functions and lexical this
-o Manual binding: bind, call, apply
+- this in global scope, function, method, event handler, class.
+- Arrow functions and lexical this.
+- Manual binding: bind, call, apply.
