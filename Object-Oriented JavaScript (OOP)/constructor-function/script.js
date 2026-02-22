@@ -12,5 +12,6 @@ function CreatePencil(name, price, color, company) {
   };
 }
 
+// We use new on our constructor function
 let pencil1 = new CreatePencil("Nataraj", 10, "black", "nataraj");
 let pencil2 = new CreatePencil("Doms", 10, "red", "doms");
