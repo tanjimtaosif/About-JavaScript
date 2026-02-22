@@ -1,6 +1,6 @@
-function kuchhDerBaadChalunga(fnc) {
+function executeLater(fnc) {
   setTimeout(fnc, Math.floor(Math.random() * 20) * 1000);
 }
-kuchhDerBaadChalunga(function () {
+executeLater(function () {
   console.log("hey");
 });
