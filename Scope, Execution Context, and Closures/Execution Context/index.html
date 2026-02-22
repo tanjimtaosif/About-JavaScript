@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Execution Context Lab</title>
+
+    <style>
+      /* SIMPLE STYLING FOR BETTER VISUALS */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+      h2 {
+        color: #1a73e8;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      .phase {
+        margin: 15px 0;
+        padding: 15px;
+        border-left: 5px solid #ccc;
+        border-radius: 4px;
+      }
+      .memory {
+        background: #e8f0fe;
+        border-color: #1a73e8;
+      }
+      .execution {
+        background: #e6fffa;
+        border-color: #38a169;
+      }
+      .code-block {
+        background: #2d3436;
+        color: #fab1a0;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 0.9em;
+      }
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      button:hover {
+        background: #1557b0;
+      }
+      li {
+        margin-bottom: 5px;
+        font-size: 0.95em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Execution Context Lab</h2>
+      <p>Watch how JS processes this code:</p>
+      <div class="code-block">
+        var name = "Gemini";<br />
+        function greet() { return "Hi!"; }
+      </div>
+
+      <div class="phase memory">
+        <strong>Phase 1: Memory (Hoisting)</strong>
+        <ul id="mem-list">
+          Click start to see...
+        </ul>
+      </div>
+
+      <div class="phase execution">
+        <strong>Phase 2: Execution (Line-by-Line)</strong>
+        <ul id="exec-list">
+          Waiting...
+        </ul>
+      </div>
+
+      <button onclick="simulateJS()">Run JS Engine Simulation</button>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
