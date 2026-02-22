@@ -1,10 +1,18 @@
 class CreatePencil {
-  Gonstructor(name, company, price, color) {
+  constructor(name, company, price, color) {
     this.name = name;
     this.company = company;
     this.price = price;
     this.color = color;
   }
+  erase() {
+    document.body.querySelectorAll("h1").forEach((elem) => {
+      if (elem.style.color === this.color) {
+        elem.remove();
+      }
+    });
+  }
+
   write(text) {
     let h1 = document.createElement("h1");
     h1.textContent = text;
