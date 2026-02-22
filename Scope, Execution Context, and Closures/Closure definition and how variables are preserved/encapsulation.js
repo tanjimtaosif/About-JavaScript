@@ -14,7 +14,7 @@ function createClickLimiter(maxLimit) {
     } else {
       console.error("LIMIT EXCEEDED");
     }
-  };
+  };  
 }
 
 // 3. WHEN: Use this when you want to protect a variable from being 
@@ -22,4 +22,4 @@ function createClickLimiter(maxLimit) {
 const tryClick = createClickLimiter(5);
 
 tryClick();
-tryClick();
+tryClick(); 
