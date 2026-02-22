@@ -5,6 +5,8 @@ function CreatePencil(name, price, color, company) {
   this.company = company;
 }
 
+// We use prototypes to optimize memory usage by storing shared properties and methods in a single location, allowing all instances to access them without duplication.
+
 CreatePencil.prototype.write = function (text) {
   let h1 = document.createElement("h1");
   h1.textContent = text;
