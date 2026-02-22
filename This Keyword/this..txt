@@ -7,8 +7,8 @@ arrow
 
 global - window
 function - window
-method with es5 fnc - object
-method with es6 arrow fnc - window
+method with es5 function - object
+method with es6 arrow function - window
 es5 function inside es5 method - window
 arrow function inside es5 method - object
 event handler - element
