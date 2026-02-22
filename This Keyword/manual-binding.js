@@ -7,7 +7,7 @@ let callObj = {
 };
 
 function abcd() {
-  console.log(this);
+  console.log(this.age);
 }
 
 abcd.call(obj); // when we pass the obj using call then it will have the object
@@ -15,7 +15,7 @@ abcd.call(obj); // when we pass the obj using call then it will have the object
 // when we use apply we can only send 2 parameters to our function, object and the rest value inside an array
 
 let applyObj = {
-  name: "harsh",
+  name: "Tanjim",
   age: 26,
 };
 
@@ -26,7 +26,7 @@ abcd.apply(obj, [1, 2, 3]);
 
 // when we use bind its creates a new copy of the function and puts on it's variables then the variable became the function 
 let obj = {
-  name: "harsh",
+  name: "Tanjim",
   age: 26,
 };
 
@@ -36,3 +36,4 @@ function abcd(a, b, c) {
 
 let fnc = abcd.bind(obj, 1, 2, 3);
 fnc();
+     
