@@ -1,6 +1,6 @@
 Teach:
 - Debouncing and Throttling
-- Lazy Loading Images (with Intersection0bserver)
+- Lazy Loading Images (with IntersectionObserver)
 - Code Splitting (intro level)
 - Avoiding unnecessary reflows and repaints
 - Memory leaks: timers, event listeners
