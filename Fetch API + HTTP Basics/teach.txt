@@ -1,0 +1,6 @@
+Teach:
+- Fetch API: GET, POST basics
+- Headers, status codes, JSON parsing
+- Form submission via fetch
+- Error handling with response.ok and try-catch
+- Basic REST principles
