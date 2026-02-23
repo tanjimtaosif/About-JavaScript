@@ -1,0 +1,5 @@
+Teach:
+
+- Chaining multiple fetch calls
+- Using public APIs (TMDB, OpenWeather, JSONPlaceholder)
+- Render data dynamically on the DOM
