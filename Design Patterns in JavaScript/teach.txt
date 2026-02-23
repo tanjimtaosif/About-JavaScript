@@ -1,0 +1,5 @@
+Teach:
+- Module Pattern (IIFE)
+- Revealing Module Pattern
+- Factory Function Pattern
+- Observer Pattern (basic pub-sub)
