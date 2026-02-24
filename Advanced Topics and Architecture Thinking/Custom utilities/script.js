@@ -11,3 +11,4 @@ function myMap(arr, callback) {
 let ans = myMap(arr, function (val) {
   return val + 2;
 });
+ 
