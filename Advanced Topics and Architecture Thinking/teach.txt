@@ -1,0 +1,6 @@
+Teach:
+- Pure vs impure functions
+- Functional Programming basics (map/filter/reduce as pipeline)
+- Separation of concerns (DOM vs logic)
+- Custom utilities (e.g., own implementation of map, deep clone)
+- How JS works in browser (Event Loop, Web APIs, Call Stack)
